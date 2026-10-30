@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background" aria-hidden="true">
+        <div class="gradient-layer"></div>
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+        <div class="grid-floor"></div>
+        <div class="geometry geometry-one"></div>
+        <div class="geometry geometry-two"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <main class="page">
+        <header class="site-header">
+            <a class="brand" href="#" aria-label="Calculator home">
+               <span class="brand-icon">±</span>
+               <span>CALCULATOR</span>
+            </a>
+            <span class="status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </span>
+        </header>
+
+        <section class="calculator" aria-label="Calculator">
+            <div class="card-heading">
+                <div>
+                    <p class="eyebrow">PRECISION ENGINE</p>
+                    <h1>Smart Calculator</h1>
+                </div>
+                <div class="calculator-symbol" aria-hidden="true">±</div>
+            </div>
+
+            <div class="display" aria-label="Calculator display">
+                <div class="display-label">
+                    <span>EXPRESSION</span>
+                    <span class="live-indicator">
+                        <span></span> LIVE
+                    </span>
+                </div>
+
+                <div
+                    class="expression"
+                    id="expression"
+                    aria-label="Current expression"
+                >0</div>
+
+                <div
+                    class="result"
+                    id="result"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >0</div>
+
+                <div class="display-footer">
+                    <span id="message">Ready to calculate</span>
+                    <span class="display-mode">DECIMAL</span>
+                </div>
+            </div>
+
+            <div class="keypad" id="keypad">
+                <button class="key key-function" data-action="clear"
+                    >AC</button>
+                <button class="key key-function" data-action="delete"
+                    aria-label="Delete last character">DEL</button>
+                <button class="key key-operator" data-action="percent"
+                    aria-label="Percentage">%</button>
+                <button class="key key-operator" data-value="/"
+                    aria-label="Divide">÷</button>
+
+                <button class="key" data-value="7">7</button>
+                <button class="key" data-value="8">8</button>
+                <button class="key" data-value="9">9</button>
+                <button class="key key-operator" data-value="*"
+                    aria-label="Multiply">×</button>
+
+                <button class="key" data-value="4">4</button>
+                <button class="key" data-value="5">5</button>
+                <button class="key" data-value="6">6</button>
+                <button class="key key-operator" data-value="-"
+                    aria-label="Subtract">−</button>
+
+                <button class="key" data-value="1">1</button>
+                <button class="key" data-value="2">2</button>
+                <button class="key" data-value="3">3</button>
+                <button class="key key-operator" data-value="+"
+                    aria-label="Add">+</button>
+
+                <button class="key key-function" data-action="sign"
+                    aria-label="Change positive or negative sign">±</button>
+                <button class="key" data-value="0">0</button>
+                <button class="key" data-value=".">.</button>
+                <button class="key key-equals" data-action="equals"
+                    aria-label="Calculate result">=</button>
+            </div>
+
+            <footer class="card-footer">
+                <span><span class="footer-dot"></span> READY</span>
+                <span>POWERED BY PRECISION</span>
+            </footer>
+        </section>
+
+        <p class="page-caption">
+            DESIGNED FOR CLARITY <span>•</span> BUILT FOR SPEED
+        </p>
+    </main>
+</body>
+</html>
